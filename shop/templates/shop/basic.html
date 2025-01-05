@@ -134,29 +134,24 @@
         <button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>
 
           <!-- - -->
+     
         <ul class="menu-sidebar p-t-95 p-b-70">
             <li class="t-center m-b-13">
-              <a href="index.html" class="txt19">Home</a>
+              <a href="/shop" class="txt19">Home</a>
             </li>
 
             <li class="t-center m-b-13">
-              <a href="menu.html" class="txt19">Menu</a>
+              <a href="/shop/menu" class="txt19">Menu</a>
             </li>
 
-            <li class="t-center m-b-13">
-              <a href="gallery.html" class="txt19">Gallery</a>
-             </li>
+
 
             <li class="t-center m-b-13">
-              <a href="about.html" class="txt19">About</a>
-            </li>
-
-            <li class="t-center m-b-13">
-              <a href="blog.html" class="txt19">Blog</a>
+              <a href="/shop/about" class="txt19">About</a>
             </li>
 
             <li class="t-center m-b-33">
-              <a href="contact.html" class="txt19">Contact</a>
+              <a href="/shop/contact" class="txt19">Contact</a>
             </li>
 
             <li class="t-center">
@@ -168,8 +163,10 @@
           <li class="t-center  txt20 m-b-33 ">
             <form method="get" action="/shop/search" class="form-inline my-2 my-lg-0 mx-3">
               <input class="form-control mr-sm-2" type="search" name="search" id="search" placeholder="Search" aria-label="Search" required>
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
             </form>
+          </li>
+          <li class="t-center  txt20 m-b-33 ">
             {% if user.is_authenticated %}
             <ul class="navbar-nav mr-2">
               <li class="nav-item dropdown">
@@ -181,15 +178,16 @@
             </ul>
             {% else %}
             <!-- Button trigger Login modal -->
-            <button type="button" class="btn btn-success mx-2" data-toggle="modal" data-target="#loginModal">Login</button>
+            <button type="button" class="btn btn-danger mx-2" data-toggle="modal" data-target="#loginModal">Login</button>
 
             <!-- Button trigger Signup modal -->
-            <button type="button" class="btn btn-success mx-2" data-toggle="modal" data-target="#signupModal">SignUp</button>
+            <button type="button" class="btn btn-danger mx-2" data-toggle="modal" data-target="#signupModal">SignUp</button>
 
             {% endif %}
-            <button type="button" class="btn btn-secondary mx-2" id="popcart" data-container="body" data-html="true" data-toggle="popover" title="MyCart" data-placement="bottom" data-content="Bottom popover">
+            <button type="button" class="btn btn-danger mx-2" id="popcart" data-container="body" data-html="true" data-toggle="popover" title="MyCart" data-placement="bottom" data-content="Bottom popover">
               Cart(<span id="cart">0</span>)
             </button>
+      
           </li>
 
           <div class="gallery-sidebar t-center p-l-60 p-r-60 p-b-40">
@@ -250,8 +248,8 @@
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header" style="background-color: rgb(111 202 203);">
-            <h5 class="modal-title" id="loginModal">Login Here</h5>
+          <div class="modal-header" style="background-color: rgb(59, 59, 59);">
+            <h4 class="modal-title" id="loginModal">Login Here</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -266,7 +264,7 @@
                   <b><label for="password">Password</label></b>
                   <input class="form-control" id="loginpassword" name="loginpassword" placeholder="Enter Your Password" type="password" required data-toggle="password">
               </div>
-              <button type="submit" class="btn btn-success">Submit</button>
+              <button type="submit" class="btn btn-danger">Submit</button>
               <a href="/shop/reset_password/" style="padding-left: 250px;">Forgot password?</a>
             </form>
             <p class="mb-0 mt-1">Don't have an account? <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#signupModal">Sign up now</a>.</p>
@@ -280,8 +278,8 @@
     <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModal" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header" style="background-color: rgb(111 202 203);">
-            <h5 class="modal-title" id="signupModal">SignUp Here</h5>
+          <div class="modal-header" style="background-color: rgb(59, 59, 59);">
+            <h4 class="modal-title" id="signupModal">SignUp Here</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -323,7 +321,7 @@
                   <b><label for="password1">Renter Password:</label></b>
                   <input class="form-control" id="password1" name="password1" placeholder="Renter Password" type="password" required data-toggle="password">
               </div>
-              <button type="submit" class="btn btn-success">Submit</button>
+              <button type="submit" class="btn btn-danger">Submit</button>
             </form>
             <p class="mb-0 mt-1">Already have an account? <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#loginModal">Login here</a>.</p>
           </div>
